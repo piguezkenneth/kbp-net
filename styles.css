@@ -1,0 +1,686 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color:#ccc;
+    background-color: #121212;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.container h3{
+    color: #0f0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    color: #0f0;
+    font-size: 2em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #0f0;
+}
+
+/* Hero Section */
+.hero {
+    /*background-image: url('/images/clothes.jpg'); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+}
+
+.hero h2 {
+    color: #0f0;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #0f0;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #1e1e1e;
+    color: #0f0;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    color: #0f0;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Features and Testimonials */
+#features, #testimonials {
+    background-color: #1e1e1e;
+    padding: 60px 0;
+}
+
+.feature-box, .testimonial, .news-item, .team-member {
+    background-color: #2a2a2a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover, .testimonial:hover, .news-item:hover, .team-member:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3, .news-item h3, .team-member h3 {
+    color: #0f0;
+}
+
+
+.testimonial p{
+    color: #f4f4f4;
+}
+
+.news-item button {
+    background-color: #0f0;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-item button:hover {
+    background-color: #1e1e1e;
+    color: #0f0;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    color: #0f0;
+}
+
+.team-member p {
+    color: #ccc;
+}
+
+/* Tutorials Section */
+.tutorials {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.tutorials h2 {
+    color: #0f0;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.tutorial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tutorial-block {
+
+    padding: 20px;
+    border-radius: 5px;
+    width: calc(45% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    position: relative;
+}
+.tutorial-block img {
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.tutorial-block:hover {
+    transform: translateY(-5px);
+}
+
+.tutorial-block h3 {
+    color: #0f0;
+    margin-bottom: 10px;
+}
+
+.sub-block {
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+
+.sub-block h4 {
+    color: #0f0;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.sub-block p {
+    color: #ccc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.sub-block p.show {
+    max-height: 100px;
+    padding: 10px 0;
+}
+
+.sub-block h4:hover {
+    color: #0a0;
+}
+
+/* Hover Effects for Background Change */
+.tutorial-block.physics:hover .hero {
+    background-image: url('/images/physicsBG.jpg');
+}
+
+.tutorial-block.electronics:hover .hero {
+    background-image: url('/images/electronicsBG.jpg');
+}
+
+.tutorial-block.programming:hover .hero {
+    background-image: url('/images/programmingBG.jpg');
+}
+
+.tutorial-block.geography:hover .hero {
+    background-image: url('/images/geographyBG.jpg');
+}
+
+/* CTA Section */
+#cta {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 60px 0;
+}
+
+#cta h2 {
+    color: #0f0;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#cta button {
+    background-color: #0f0;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#cta button:hover {
+    background-color: #1e1e1e;
+    color: #0f0;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #0f0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #0f0;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1e1e1e;
+    color: #0f0;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    color: #0f0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #0f0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.copyright {
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.rights-reserved-icon {
+    vertical-align: text-bottom;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        background: #1e1e1e;
+        /*background-image: url('/images/vladimir-putin.jpg');*/
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background: #2a2a2a;
+        /* background-image: url('/images/donald trump.jpg');*/
+    }
+
+    .tutorial-block {
+        width: 100%;
+    }
+
+    .tutorials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-block p {
+        max-height: 100%;
+    }
+}
+
+/* Hover Effects for Background Change on Mobile */
+@media (max-width: 768px) {
+    .tutorial-block.physics:hover .hero {
+        background-image: url('/images/physicsBG.jpg');
+    }
+
+    .tutorial-block.electronics:hover .hero {
+        background-image: url('/images/electronicsBG.jpg');
+    }
+
+    .tutorial-block.programming:hover .hero {
+        background-image: url('/images/programmingBG.jpg');
+    }
+
+    .tutorial-block.geography:hover .hero {
+        background-image: url('/images/geographyBG.jpg');
+    }
+}
+
+/* Additional Styling for Consistency */
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0f0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #0f0;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #1e1e1e;
+    color: #0f0;
+}
+
+/* Animation and Transition Enhancements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Additional Responsive Design Adjustments */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .tutorial-block {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.bg-dark {
+    background-color: #1e1e1e;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+.color-green {
+    color: #0f0;
+}
+
+.color-light {
+    color: #ccc;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Toggle Button Styling */
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    margin-left: auto; /* Adjust position */
+    margin-right: 20px; /* Adjust position */
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 40px; /* Adjust width */
+    height: 20px; /* Adjust height */
+    background-color: #2a2a2a; /* Default background color */
+    border-radius: 10px; /* Adjust border radius */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-label:before {
+    content: "";
+    position: absolute;
+    top: 2px; /* Adjust top position */
+    left: 2px; /* Adjust left position */
+    width: 16px; /* Adjust width */
+    height: 16px; /* Adjust height */
+    background-color: #ccc; /* Default toggle color */
+    border-radius: 50%; /* Rounded shape */
+    transition: transform 0.3s ease;
+}
+
+/* Toggle Button Animation for Dark Mode */
+input:checked + .toggle-label {
+    background-color: #ccc; /* Background color when checked */
+}
+
+input:checked + .toggle-label:before {
+    transform: translateX(20px); /* Position of toggle */
+    background-color: #2a2a2a; /* Toggle color when checked */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark mode background color */
+    color: #ccc; /* Dark mode text color */
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e; /* Dark mode container background color */
+}
+
+.dark-mode header {
+    background-color: #1e1e1e; /* Dark mode header background color */
+}
+
+.dark-mode .toggle-label {
+    background-color: #ccc; /* Dark mode toggle background color */
+}
+
+.dark-mode .toggle-label:before {
+    background-color: #2a2a2a; /* Dark mode toggle color */
+}
+
+
+
