@@ -9,28 +9,27 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar">
             <a class="navbar-brand" href="#"><img src="KBP1AA.png" alt="KBP Logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="burger" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="burger-lines"></span>
+                <span class="burger-lines"></span>
+                <span class="burger-lines"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
+            <div class="nav-links" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" aria-haspopup="true" aria-expanded="false">
                             Home
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
                             <a class="dropdown-item" href="#">KBP.Net</a>
                             <a class="dropdown-item" href="#">KBP.Net Shop</a>
                             <a class="dropdown-item" href="#">Mission</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" aria-haspopup="true" aria-expanded="false">
                             About
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
@@ -40,8 +39,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" aria-haspopup="true" aria-expanded="false">
                             Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownServices">
@@ -54,13 +52,9 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <div class="theme-toggle">
-                        <input type="checkbox" id="theme-toggle">
-                        <label for="theme-toggle" class="toggle-label"></label>
-                    </div>
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline">
+                    <input class="form-control" id="search-input" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </nav>
