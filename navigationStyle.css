@@ -1,19 +1,4 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-/* Body and General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    color: #444;
-    background-color: #1c1c1c;
-    line-height: 1.6;
-}
 
 /* Header */
 header {
