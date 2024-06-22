@@ -28,3 +28,4 @@ clearBtn.addEventListener('click', () => {
     searchInput.focus();
 });
 
+
