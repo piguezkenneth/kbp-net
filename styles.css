@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 /* Body and General Styling */
@@ -33,8 +33,8 @@ header img {
     justify-content: space-between;
     padding: 0 20px;
     background-color: #252525;
-    position: relative;
-    z-index: 1000;
+    position: static;
+    /*z-index: 1000; */
 }
 
 .navbar-brand {
